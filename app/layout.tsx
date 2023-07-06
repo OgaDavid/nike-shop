@@ -1,8 +1,36 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import localFont from "next/font/local";
 
-const inter = Inter({ subsets: ['latin'] })
+const BRFrima = localFont({
+  src: [
+    {
+      path: '../fonts/BRFirma-font/BRFirma-Light.woff2',
+      weight: '100',
+      style: 'normal'
+    },
+    {
+      path: '../fonts/BRFirma-font/BRFirma-Regular.woff2',
+      weight: '200',
+      style: 'normal'
+    },
+    {
+      path: '../fonts/BRFirma-font/BRFirma-Medium.woff2',
+      weight: '300',
+      style: 'normal'
+    },
+    {
+      path: '../fonts/BRFirma-font/BRFirma-SemiBold.woff2',
+      weight: '400',
+      style: 'normal'
+    },
+    {
+      path: '../fonts/BRFirma-font/BRFirma-Bold.woff2',
+      weight: '500',
+      style: 'normal'
+    },
+  ]
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +44,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={BRFrima.className}>{children}</body>
     </html>
   )
 }
