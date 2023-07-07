@@ -1,6 +1,8 @@
+import Footer from '@/components/footer';
 import './globals.css'
 import type { Metadata } from 'next'
 import localFont from "next/font/local";
+import Navbar from '@/components/navbar';
 
 const BRFrima = localFont({
   src: [
@@ -44,7 +46,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={BRFrima.className}>{children}</body>
+      <body className={BRFrima.className}>
+      <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }
