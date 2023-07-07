@@ -18,7 +18,7 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
     active: pathName === `/category/${route.id}`,
   }));
   return (
-    <nav className="mx-6 flex overflow-auto scrollbar-hide whitespace-nowrap items-center space-x-4 lg:space-x-6">
+    <nav className="mx-3 md:mx-6 flex overflow-auto scrollbar-hide whitespace-nowrap items-center space-x-4 lg:space-x-6">
       {routes.map((route) => (
         <Link
           key={route.label}
