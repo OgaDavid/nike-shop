@@ -9,11 +9,11 @@ const Navbar = async () => {
   return (
     <div className="border-b">
       <Container>
-        <div className="relative px-4 sm:px-6 lg:px-8 flex h-16 items-center">
+        <div className="relative px-2 sm:px-6 lg:px-8 flex h-16 items-center">
           <Link
             aria-aria-label="Nike home page"
             href="/"
-            className="ml-4 h-[59px] w-[59px] flex lg:ml-0 gap-x-2"
+            className="ml-4 h-[39px] w-[39px] md:h-[59px] shrink-0 sm:w-[59px] flex lg:ml-0 gap-x-2"
           >
             <svg
               aria-hidden="true"
