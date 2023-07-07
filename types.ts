@@ -1,7 +1,7 @@
 export interface Billboard {
     id: string,
-    name: string,
-    imgUrl: string
+    label: string,
+    imageUrl: string
 }
 
 export interface Category {
