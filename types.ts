@@ -29,6 +29,7 @@ export interface Color {
 export interface Product {
   id: string;
   category: Category;
+  description: string,
   name: string;
   price: string;
   size: Size;
