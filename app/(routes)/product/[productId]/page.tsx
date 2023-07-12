@@ -21,12 +21,12 @@ const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
     categoryId: product.category.id,
   });
 
-  // remove product selected from suggested products and then reduce the number of products to 8 and randomize
+  // remove product selected from suggested products, randomize the suggested products and then reduce to 8
   const suggestedProducts = await Products.filter(
     (item) => item.id !== params.productId
   )
-    .slice(0, 8)
-    .sort(() => Math.random() - 0.5);
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 8);
 
   if (!product) {
     return null;
