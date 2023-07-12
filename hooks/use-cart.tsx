@@ -3,7 +3,6 @@ import { toast } from "react-hot-toast";
 import { persist, createJSONStorage } from "zustand/middleware";
 
 import { Product } from "@/types";
-import { AlertTriangle } from "lucide-react";
 
 interface CartStore {
   items: Product[];
@@ -21,7 +20,7 @@ const useCart = create(
         const existingItem = currentItems.find((item) => item.id === data.id);
 
         if (existingItem) {
-          return toast("Item already in cart.");
+          return toast.error("Item already in cart.");
         }
 
         set({ items: [...get().items, data] });
