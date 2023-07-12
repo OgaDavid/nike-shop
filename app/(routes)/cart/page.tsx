@@ -1,22 +1,26 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 import Container from "@/components/ui/container";
 import useCart from "@/hooks/use-cart";
-import { useEffect, useState } from "react";
+
 import CartItem from "./components/cart-item";
 
+export const revalidate = 0;
+
 const CartPage = () => {
-  //   const [isMounted, setisMounted] = useState(false);
-
-  //   useEffect(() => {
-  //     setisMounted(true);
-  //   }, []);
-
-  //   if (!isMounted) {
-  //     return null;
-  //   }
-
+  const [isMounted, setIsMounted] = useState(false);
   const cart = useCart();
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
+
   return (
     <div className="bg-white">
       <Container>
@@ -25,7 +29,7 @@ const CartPage = () => {
           <div className="mt-12 lg:grid lg:grid-cols-12 lg:items-start gap-x-12">
             <div className="lg:col-span-7">
               {cart.items.length === 0 && (
-                <p className="text-neutral-500">No Items added to cart!</p>
+                <p className="text-neutral-500">No items added to cart.</p>
               )}
               <ul>
                 {cart.items.map((item) => (
