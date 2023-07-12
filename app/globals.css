@@ -11,3 +11,13 @@ body,
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+.social-icons {
+  color: '#888888'
+}
+
+.social-icons:hover {
+  color: white;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
