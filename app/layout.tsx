@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Navbar from "@/components/navbar";
+import ModalProvider from "@/providers/modal-provider";
 
 const BRFrima = localFont({
   src: [
@@ -91,6 +92,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={BRFrima.className}>
+        <ModalProvider />
         <Navbar />
         {children}
         <Footer />
