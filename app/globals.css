@@ -21,3 +21,11 @@ body,
   cursor: pointer;
   transition: all .3s ease-in-out;
 }
+
+.graph {
+  background-image: url('/images/graph-paper.svg');
+}
+
+.subtle {
+  background: rgba(255, 255, 255, 0.7);
+}

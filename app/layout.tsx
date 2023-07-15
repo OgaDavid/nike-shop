@@ -6,6 +6,7 @@ import Navbar from "@/components/navbar";
 import ModalProvider from "@/providers/modal-provider";
 import ToastProvider from "@/providers/toast-provider";
 
+
 const BRFrima = localFont({
   src: [
     {
@@ -36,7 +37,7 @@ const BRFrima = localFont({
   ],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     default: "Nike. Just Do It. Nike.com",
     template: "%s | Nike",
@@ -82,7 +83,7 @@ export const metadata = {
       "https://c.static-nike.com/a/images/w_1920,c_limit/bzl2wmsfh7kgdkufrrjq/image.jpg",
     ],
   },
-  category: ["e commerce", "Shoe shop"],
+  category: "e-commerce",
 };
 
 export default function RootLayout({
