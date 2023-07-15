@@ -6,6 +6,7 @@ import Image from "next/image";
 import localFont from "next/font/local";
 import Button from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { ArrowRightCircle } from "lucide-react";
 
 const FuturaCondensedExtraBold = localFont({
   src: "../fonts/Futura-Condensed-Extra-Bold.woff2",
@@ -20,10 +21,10 @@ const HomePage = async () => {
   return (
     <Container>
       <div className="space-y-10 pb-10">
-        <div className="flex flex-col sm:flex-row items-center graph justify-between">
-          <div className="flex flex-col items-center sm:flex-row subtle gap-10">
-            <div className="px-4 pt-5 flex gap-8 flex-col sm:pt-0">
-              <div className="flex flex-col gap-3">
+        <div className="flex flex-col sm:flex-row graph justify-between">
+          <div className="flex flex-col sm:flex-row subtle gap-10">
+            <div className="px-3 sm:px-5 pt-5 flex gap-8 flex-col sm:pt-0">
+              <div className="flex sm:pt-[130px] flex-col gap-3">
                 <h1
                   className={cn(
                     "text-6xl sm:text-8xl font-semibold italic pb-4",
@@ -39,15 +40,31 @@ const HomePage = async () => {
                 </p>
               </div>
               <div>
-                <Button className="bg-black text-white flex items-center gap-2">
+                <Button className="bg-black mb-4 text-white flex items-center gap-2">
                   Shop Now <ArrowRight className="w-4 h-4" />
                 </Button>
+              </div>
+              <div className="w-full">
+                <label
+                  className="text-sm pb-2 flex gap-2 items-center"
+                  htmlFor="email"
+                >
+                  Join our Newsletter <ArrowRightCircle className="w-4 h-4" />
+                </label>
+                <div className="flex">
+                  <input
+                    className="bg-gray-100 border sm:w-[300px] border-black"
+                    name="email"
+                    type="email"
+                  />
+                  <Button className="rounded-none">Subscribe</Button>
+                </div>
               </div>
             </div>
             <div>
               <Image
                 className=""
-                width={700}
+                width={800}
                 height={700}
                 objectFit="contain"
                 alt="image"
@@ -57,7 +74,7 @@ const HomePage = async () => {
           </div>
         </div>
         <div className="flex flex-col gap-y-8 px-4 sm:px-6 lg:px-8">
-            <ProductList title="Featured Products" items={products} />
+          <ProductList title="Featured Products" items={products} />
         </div>
       </div>
     </Container>
